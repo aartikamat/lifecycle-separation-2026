@@ -34,12 +34,10 @@ The dataset itself is released under CC-BY-4.0. Use of the dataset for
 research, analysis, or product development is permitted under CC-BY-4.0 terms
 (attribution required).
 
-The author holds pending USPTO Provisional Patent Applications in the field
+The author holds pending U.S. provisional patent applications in the field
 of algorithmic decentralized-exchange trading and blockchain market
-microstructure, including UDAY P1 #64/022,461 (filed 2026-03-30, Micro
-Entity) and UDAY P2 #64/099,108 (filed 2026-06-25, Micro Entity). The
-release of this dataset under CC-BY-4.0 does not affect patent priority
-claims under 35 USC 102(b)(1)(A).
+microstructure. The release of this dataset under CC-BY-4.0 does not
+affect patent priority claims under 35 USC 102(b)(1)(A).
 
 Commercial re-implementation of specific methodologies covered by pending
 patent claims may require patent licensing. Academic re-implementation is

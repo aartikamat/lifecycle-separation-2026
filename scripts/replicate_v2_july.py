@@ -16,8 +16,8 @@ import os
 from datetime import datetime, timezone
 from collections import Counter
 
-DATA = "/root/solana-bot/data"
-OUT = "/root/solana-bot/analysis"
+DATA = "data"
+OUT = "analysis"
 os.makedirs(OUT, exist_ok=True)
 
 COHORTS_V1 = f"{DATA}/sniper_cohorts_intra.jsonl"
@@ -150,8 +150,8 @@ def main():
 
         f.write("PIPELINE VERSIONS\n")
         f.write("-" * 65 + "\n")
-        f.write("v1: uday-pumpfun-coord-detector (stopped 2026-06-29)\n")
-        f.write("v2: uday-pumpfun-coord-detector-v2 (rewrite, currently live)\n\n")
+        f.write("v1: cohort detector v1 (stopped 2026-06-29)\n")
+        f.write("v2: cohort detector v2 (rewrite)\n\n")
 
         f.write("v1 COHORT WINDOW (from paper)\n")
         f.write("-" * 65 + "\n")

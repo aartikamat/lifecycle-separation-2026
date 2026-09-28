@@ -12,7 +12,7 @@ Figures:
   4. daily_activity_overlap.png        — cohort activity + rejection activity time series
   5. cohort_size_distribution.png      — histogram of cohort n_wallets
 
-Output: /root/solana-bot/analysis/figures/
+Output: analysis/figures/
 """
 
 import json
@@ -24,8 +24,8 @@ from matplotlib.patches import Circle
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 
-DATA = "/root/solana-bot/data"
-OUT = "/root/solana-bot/analysis/figures"
+DATA = "data"
+OUT = "analysis/figures"
 os.makedirs(OUT, exist_ok=True)
 
 COHORTS = f"{DATA}/sniper_cohorts_intra.jsonl"
@@ -178,7 +178,7 @@ def fig2_dex_distribution(dex_counts):
 
 def fig3_hourly_winner_rate():
     log("Fig 3: Hourly winner rate")
-    csv_path = "/root/solana-bot/analysis/rejection_hour_of_day.csv"
+    csv_path = "analysis/rejection_hour_of_day.csv"
     if not os.path.exists(csv_path):
         log(f"  {csv_path} not found, skipping")
         return

@@ -66,8 +66,8 @@ The precise mapping between reason codes and filter logic is documented in Kamat
 
 ## Data provenance summary
 
-- Cohort detections are produced by `uday-pumpfun-coord-detector-v2`, a Python 3 process consuming raw pump.fun program events via Helius WebSocket.
-- Rejection outcomes are produced by `post-reject-tracker`, a Node.js process consuming the algorithmic trading fleet's filter-rejection log and sampling post-rejection price/liquidity via DexScreener.
+- Cohort detections are produced by the author's cohort-detection process (Python 3), which consumes raw pump.fun program events via a Helius WebSocket.
+- Rejection outcomes are produced by the author's post-rejection tracker (Node.js), which reads an algorithmic trading system's filter-rejection log and samples post-rejection price/liquidity via DexScreener.
 - Both streams are the same measurement pipelines used across the RED-2400, RED-COHORT-2026, and RED-PUMP-2026-v1 dataset series.
 
 ## Notes on time windows

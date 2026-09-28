@@ -8,8 +8,8 @@ Tests: "does the counterfactual winner rate vary by UTC hour?"
 Publishable as short-form letter (JFDS Letters or similar).
 Directly extends the Hour-Aware Risk paper into the rejection domain.
 
-Output: /root/solana-bot/analysis/rejection_hour_of_day_report.txt
-        /root/solana-bot/analysis/rejection_hour_of_day.csv
+Output: analysis/rejection_hour_of_day_report.txt
+        analysis/rejection_hour_of_day.csv
 """
 
 import json
@@ -17,8 +17,8 @@ import os
 from datetime import datetime, timezone
 from collections import defaultdict
 
-DATA = "/root/solana-bot/data"
-OUT = "/root/solana-bot/analysis"
+DATA = "data"
+OUT = "analysis"
 os.makedirs(OUT, exist_ok=True)
 
 REJECTIONS = f"{DATA}/rejection_outcomes.jsonl"

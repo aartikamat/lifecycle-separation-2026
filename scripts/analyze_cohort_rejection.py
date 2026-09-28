@@ -9,20 +9,20 @@ Joins sniper cohorts against rejection outcomes to answer:
 Novel cross-dataset finding for future paper.
 
 INPUTS:
-  /root/solana-bot/data/sniper_cohorts_intra.jsonl  (~20K rows, ~14MB)
-  /root/solana-bot/data/rejection_outcomes.jsonl    (~712K rows, ~433MB - STREAMED)
+  data/sniper_cohorts_intra.jsonl  (~20K rows, ~14MB)
+  data/rejection_outcomes.jsonl    (~712K rows, ~433MB - STREAMED)
 
 OUTPUTS:
-  /root/solana-bot/analysis/cohort_rejection_join_report.txt   (human readable)
-  /root/solana-bot/analysis/cohort_rejection_join_by_mint.csv  (mint-level detail)
-  /root/solana-bot/analysis/cohort_rejection_summary.csv       (aggregate stats)
+  analysis/cohort_rejection_join_report.txt   (human readable)
+  analysis/cohort_rejection_join_by_mint.csv  (mint-level detail)
+  analysis/cohort_rejection_summary.csv       (aggregate stats)
 
 DESIGN NOTES:
 - Uses readline streaming for the 433MB rejection_outcomes file
-  (per memory rule: never readFileSync large JSONL - OOM risk)
+  (streaming avoids loading the large file into memory)
 - Cohort file is small enough to fit in RAM as a set of mints
-- Runs in ~5-10 minutes on the current droplet
-- Zero PM2 process needed (one-shot analysis)
+- Runs in ~5-10 minutes on a single machine
+- One-shot analysis (no long-running process needed)
 
 Author: Arati Uday Kamat
 Date: 2026-07-16
@@ -34,9 +34,9 @@ import sys
 from collections import defaultdict, Counter
 from datetime import datetime
 
-COHORTS_FILE = "/root/solana-bot/data/sniper_cohorts_intra.jsonl"
-REJECTIONS_FILE = "/root/solana-bot/data/rejection_outcomes.jsonl"
-OUTPUT_DIR = "/root/solana-bot/analysis"
+COHORTS_FILE = "data/sniper_cohorts_intra.jsonl"
+REJECTIONS_FILE = "data/rejection_outcomes.jsonl"
+OUTPUT_DIR = "analysis"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 

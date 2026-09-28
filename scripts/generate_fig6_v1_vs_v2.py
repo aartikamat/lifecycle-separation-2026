@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-OUT = "/root/solana-bot/analysis/figures"
+OUT = "analysis/figures"
 os.makedirs(OUT, exist_ok=True)
 
 plt.rcParams.update({

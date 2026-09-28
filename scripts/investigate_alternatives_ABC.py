@@ -7,7 +7,7 @@ Rules out 3 alternative explanations for the cohort-rejection disjoint finding:
   B. Time window artifact  (do they overlap in the 14-day cohort window?)
   C. DEX venue asymmetry   (different DEXes = different token universes)
 
-Output: /root/solana-bot/analysis/alternatives_ABC_report.txt
+Output: analysis/alternatives_ABC_report.txt
 """
 
 import json
@@ -16,8 +16,8 @@ import subprocess
 from datetime import datetime, timezone
 from collections import Counter
 
-DATA = "/root/solana-bot/data"
-OUT = "/root/solana-bot/analysis"
+DATA = "data"
+OUT = "analysis"
 os.makedirs(OUT, exist_ok=True)
 
 COHORTS = f"{DATA}/sniper_cohorts_intra.jsonl"

@@ -15,7 +15,7 @@ Alternative hypotheses to test:
   H4: Cohort mints are on different DEX venues
   H5: Cohort mints are in older data (before rejection tracker started)
 
-Outputs to /root/solana-bot/analysis/cohort_disjoint_investigation.txt
+Outputs to analysis/cohort_disjoint_investigation.txt
 """
 
 import json
@@ -23,8 +23,8 @@ import os
 from collections import Counter, defaultdict
 from datetime import datetime
 
-DATA = "/root/solana-bot/data"
-OUT = "/root/solana-bot/analysis"
+DATA = "data"
+OUT = "analysis"
 os.makedirs(OUT, exist_ok=True)
 
 COHORTS = f"{DATA}/sniper_cohorts_intra.jsonl"

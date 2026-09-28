@@ -75,5 +75,5 @@ Patent and commercial licensing disclosure: the code and data are released under
 ## Author
 
 Arati Uday Kamat
-Independent Researcher, McKinney, TX, USA
+Independent Researcher, United States
 ORCID: [0009-0000-4781-312X](https://orcid.org/0009-0000-4781-312X)
