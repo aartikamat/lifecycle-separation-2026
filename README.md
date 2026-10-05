@@ -2,8 +2,10 @@
 
 Reproducibility scripts for the paper:
 
-**Sniper Cohorts and Algorithmic Filter Rejections in Solana Memecoin Markets: Two-Window Replication of Lifecycle-Stage Population Separation**
-Kamat, A. U. (2026). Working paper.
+**Do Two On-Chain Observation Pipelines See the Same Tokens? Cross-Pipeline Coverage on the Solana pump.fun Launchpad**
+Kamat, A. U. (2026). arXiv:2609.18975. https://doi.org/10.48550/arXiv.2609.18975
+
+(Earlier versions of the paper were titled "Sniper Cohorts and Algorithmic Filter Rejections in Solana Memecoin Markets".)
 
 ## Zenodo bundle (data + full reproducibility package)
 
@@ -61,19 +63,17 @@ Every number in the paper reproduces byte-for-byte from the frozen data files. T
 If you use this code or data, please cite the paper AND the dataset:
 
 **Paper:**
-Kamat, A. U. (2026). Sniper Cohorts and Algorithmic Filter Rejections in Solana Memecoin Markets: Two-Window Replication of Lifecycle-Stage Population Separation. SSRN Working Paper [ID pending].
+Kamat, A. U. (2026). Do Two On-Chain Observation Pipelines See the Same Tokens? Cross-Pipeline Coverage on the Solana pump.fun Launchpad. arXiv:2609.18975. https://doi.org/10.48550/arXiv.2609.18975
 
 **Dataset:**
-Kamat, A. U. (2026). LIFECYCLE-SEPARATION-2026-v1: Sniper Cohort and Algorithmic Rejection Datasets [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21399918
+Kamat, A. U. (2026). Cross-Pipeline Coverage on the Solana pump.fun Launchpad: Reproducibility Package [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21399918
 
 ## License
 
 CC-BY-4.0. See [LICENSE](LICENSE).
 
-Patent and commercial licensing disclosure: the code and data are released under CC-BY-4.0. The author holds pending USPTO Provisional Patent Applications in the field of algorithmic decentralized-exchange trading and blockchain market microstructure. Commercial re-implementation of specific methodologies covered by pending patent claims may require patent licensing. Academic re-implementation is unaffected. For commercial licensing inquiries: arati.kamat@ieee.org
-
 ## Author
 
 Arati Uday Kamat
-Independent Researcher, United States
+Independent Researcher
 ORCID: [0009-0000-4781-312X](https://orcid.org/0009-0000-4781-312X)
