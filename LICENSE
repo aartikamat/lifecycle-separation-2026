@@ -23,24 +23,6 @@ No additional restrictions  You may not apply legal terms or technological
 
 Suggested attribution:
 
-  Kamat, A. U. (2026). LIFECYCLE-SEPARATION-2026-v1: Sniper Cohort and
-  Algorithmic Rejection Datasets for Two-Window Lifecycle-Stage Separation
-  Analysis in Solana Memecoin Markets. Zenodo.
-  https://doi.org/10.5281/zenodo.[DOI-TO-BE-ASSIGNED]
-
-Patent and commercial licensing disclosure:
-
-The dataset itself is released under CC-BY-4.0. Use of the dataset for
-research, analysis, or product development is permitted under CC-BY-4.0 terms
-(attribution required).
-
-The author holds pending U.S. provisional patent applications in the field
-of algorithmic decentralized-exchange trading and blockchain market
-microstructure. The release of this dataset under CC-BY-4.0 does not
-affect patent priority claims under 35 USC 102(b)(1)(A).
-
-Commercial re-implementation of specific methodologies covered by pending
-patent claims may require patent licensing. Academic re-implementation is
-unaffected.
-
-For commercial licensing inquiries: arati.kamat@ieee.org
+  Kamat, A. U. (2026). Cross-Pipeline Coverage on the Solana pump.fun
+  Launchpad: Reproducibility Package [Data set]. Zenodo.
+  https://doi.org/10.5281/zenodo.21399918
