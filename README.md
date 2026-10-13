@@ -1,22 +1,40 @@
 # lifecycle-separation-2026
 
-Reproducibility scripts for the paper:
+Code repository for the paper:
 
 **Do Two On-Chain Observation Pipelines See the Same Tokens? Cross-Pipeline Coverage on the Solana pump.fun Launchpad**
 Kamat, A. U. (2026). arXiv:2609.18975. https://doi.org/10.48550/arXiv.2609.18975
 
 (Earlier versions of the paper were titled "Sniper Cohorts and Algorithmic Filter Rejections in Solana Memecoin Markets".)
 
-## Zenodo bundle (data + full reproducibility package)
+> **Note:** the current version of the paper reproduces from the Zenodo package `cross_pipeline_coverage_v2.zip` (see below), not from the scripts in this repository. The seven scripts here are the earlier version 1 analysis (Zenodo version 1) and are kept for the record.
+
+## Zenodo package (data + full reproducibility package)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21399918.svg)](https://doi.org/10.5281/zenodo.21399918)
 
-- **Concept DOI (always resolves to latest version):** [10.5281/zenodo.21399918](https://doi.org/10.5281/zenodo.21399918)
-- **Version v1 pinned DOI:** [10.5281/zenodo.21399919](https://doi.org/10.5281/zenodo.21399919)
+- **Concept DOI (always resolves to the latest version):** [10.5281/zenodo.21399918](https://doi.org/10.5281/zenodo.21399918)
+- **Current file:** `cross_pipeline_coverage_v2.zip` (version 2.0.0, 23 September 2026)
 
-The Zenodo bundle contains the frozen data files, analysis output reports, and full documentation (LICENSE, README, SCHEMA, SHA256SUMS). This GitHub repository mirrors only the analysis scripts for code-first discoverability.
+The package contains the frozen input files, the two scripts used for the current paper (`reconstruct_overlap.py` and `verify_red_reject_containment.py`), the expected outputs, the figure, documentation (README, data dictionary, number-provenance table, CHANGELOG), a `SHA256SUMS` checksum file, and separate licence files for code and data.
 
-## What's in this repository
+## How to reproduce the paper
+
+Download `cross_pipeline_coverage_v2.zip` from the concept DOI above. Then:
+
+```bash
+# Python 3.12+; the scripts use only the Python standard library
+unzip cross_pipeline_coverage_v2.zip
+cd cross_pipeline_coverage_v2
+sha256sum -c SHA256SUMS      # every line should print OK
+bash run.sh                  # on Windows: powershell -File run.ps1
+```
+
+`run.sh` checks the input checksums, rewrites every file in `outputs/`, and exits with a non-zero code unless its built-in checks on the reported counts pass. A re-run in October 2026 rewrote all 14 output files byte-identical to the deposited copies.
+
+## What's in this repository (earlier version 1 analysis)
+
+The seven scripts below are the earlier version 1 analysis, written for the data files of Zenodo version 1. Those files are superseded and are not part of the current Zenodo package, so the scripts are kept for the record and are not the way to reproduce the current paper. In the script names, "v1" and "v2" refer to the two data windows of that analysis, not to versions of the paper.
 
 ```
 scripts/
@@ -31,32 +49,6 @@ scripts/
 LICENSE       CC-BY-4.0
 SCHEMA.md     Field definitions for both data streams
 ```
-
-## How to reproduce the paper
-
-Download the data files from the Zenodo bundle above. Then:
-
-```bash
-# Python 3.9+ with matplotlib
-pip install matplotlib
-
-# Unzip the Zenodo bundle to a working folder
-unzip LIFECYCLE-SEPARATION-2026-v1.zip
-
-# Edit the DATA_DIR variable at the top of each script if needed,
-# then run in order
-python scripts/analyze_cohort_rejection.py
-python scripts/investigate_cohort_disjoint.py
-python scripts/investigate_alternatives_ABC.py
-python scripts/replicate_v2_july.py
-python scripts/analyze_rejection_by_utc_hour.py
-
-# Figures
-python scripts/generate_lifecycle_paper_figures.py
-python scripts/generate_fig6_v1_vs_v2.py
-```
-
-Every number in the paper reproduces byte-for-byte from the frozen data files. Total runtime under 5 minutes on a modest single-vCPU machine.
 
 ## Citation
 

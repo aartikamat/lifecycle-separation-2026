@@ -28,7 +28,7 @@ REJECTIONS = f"{DATA}/rejection_outcomes.jsonl"
 V1_START = datetime(2026, 6, 11, tzinfo=timezone.utc).timestamp()
 V1_END = datetime(2026, 6, 26, tzinfo=timezone.utc).timestamp()
 
-# v2 window (from server data)
+# v2 window (from the collected data)
 V2_START = datetime(2026, 6, 29, tzinfo=timezone.utc).timestamp()
 V2_END = datetime(2026, 7, 17, tzinfo=timezone.utc).timestamp()
 

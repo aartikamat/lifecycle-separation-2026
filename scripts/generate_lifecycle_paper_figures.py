@@ -3,7 +3,7 @@
 generate_lifecycle_paper_figures.py
 
 Generates figures for the lifecycle-separation paper.
-Runs on the server where data lives, produces 5 PNGs at 200 DPI.
+Reads the data files in the DATA folder and produces 5 PNGs at 200 DPI.
 
 Figures:
   1. venn_cohort_vs_rejection.png     — set overlap visualization

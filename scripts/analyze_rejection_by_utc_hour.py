@@ -5,7 +5,6 @@ analyze_rejection_by_utc_hour.py
 UTC hour-of-day stratification of the 712K rejection outcomes.
 Tests: "does the counterfactual winner rate vary by UTC hour?"
 
-Publishable as short-form letter (JFDS Letters or similar).
 Directly extends the Hour-Aware Risk paper into the rejection domain.
 
 Output: analysis/rejection_hour_of_day_report.txt
